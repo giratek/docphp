@@ -1,4 +1,4 @@
-## DocPHPManualer for Sublime Text 3
+## DocPHPManualer for Sublime Text 4
 
 [![Packagecontrol total downloads](https://img.shields.io/packagecontrol/dt/DocPHPManualer.svg?style=flat-square)](https://packagecontrol.io/packages/DocPHPManualer/)
 
