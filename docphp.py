@@ -554,7 +554,11 @@ class PopupHTMLParser(HTMLParser):
         return False
 
     def get_tag_text(self, tag, attrs, is_startend=False):
-        return '<' + (tag + ' ' + ' '.join(map(lambda m: m + '="' + re.sub('(?<!\\\\)"', '\\"', attrs[m]) + '"', attrs))).rstrip() + (' />' if is_startend else '>')
+        t=''
+        if type(attrs) == dict:
+            for key in attrs:
+                t=t+ key + '="' + attrs[key] + '"'
+        return '<'+ tag + ' ' + t + (' />' if is_startend else '>')
 
 
 class DocphpCheckoutLanguageCommand(sublime_plugin.TextCommand):
